@@ -21,7 +21,7 @@ def successful_logon(dataset_file, column_name):
     plt.ylabel('Number of Logon')
     plt.title('Successful Logon')
 
-    plt.xticks(rotation=75)  # Rotate x-axis labels vertically
+    plt.xticks(rotation=75)  # Rotate x-axis labels to the angle deem fit.
 
     plt.tight_layout()  # Ensure labels and title fit within the figure
 
@@ -48,18 +48,18 @@ def failed_logon(failed_dataset_file, failed_column_name):
     plt.ylabel('Logon Attempts')
     plt.title('Failed Logon')
 
-    plt.xticks(rotation=75)  # Rotate x-axis labels vertically
+    plt.xticks(rotation=75)  # Rotate x-axis labels to the angle you deem fit
 
     plt.tight_layout()  # Ensure labels and title fit within the figure
 
     plt.savefig(failed_graph_output_path)
     plt.close()
 
-
-dataset_file_path = "/home/kali/Desktop/Successful Logon_2023_07_31_0003.csv"
-failed_dataset_file_path = "/home/kali/Desktop/Failed Logon.csv"
-graph_output_path = '/home/kali/Desktop/Successful_logon.png'  # Added '.png' extension
-failed_graph_output_path ='/home/kali/Desktop/Failed_logon.png'
+storage_Path = input('Enter storage folder: ') # Name the storage folder, either to be stored in Documents. Downloads or Desktop
+dataset_file_path = "/home/kali/Desktop/Successful Logon_2023_07_31_0003.csv"  # The location of the csv file for the successful logon
+failed_dataset_file_path = f"/home/kali/Desktop/Failed Logon.csv"  # The location of the csv file for the failed logon
+graph_output_path = f'/home/kali/{storage_Path}/Successful_logon.png'  # Add either a '.png' or '.jpeg' extension
+failed_graph_output_path = f'/home/kali/{storage_Path}/Failed_logon.png'
 column_to_analyze = input("Enter name of column: ")
 successful_logon(dataset_file_path, column_to_analyze)
 print()
