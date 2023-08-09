@@ -27,7 +27,7 @@ def User_logon_Host(file_Name, user_column, device_column, date_column):   # Spe
     print(User_table)
 
 filename = input("Enter name of the csv file: ")
-file_Name = f'/home/kali/Desktop/{filename}.csv'
+file_Name = f'/home/kali/Desktop/{filename}.csv'  # You can modify the csv file path based on the location of the file on your PC
 user_column = 'DestinationAccount'
 device_column = 'DestinationMachine'
 date_column = 'DetectionTime'
